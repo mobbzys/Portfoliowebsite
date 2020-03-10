@@ -53,38 +53,33 @@ body {
 
 /*Overlay for link*/
 .image {
-  opacity: 1;
   display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
+ 
 }
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
+.overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #07ba72;
 }
-
-.container:hover .image {
-  opacity: 0.3;
-}
-
-.container:hover .middle {
-  opacity: 1;
+.overlay:hover {
+  opacity: 0.8;
 }
 
 .text {
-  background-color: #ddd;
-  color: #222;
-  font-size: 16px;
-  padding: 16px 32px;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /*Colours Override*/
@@ -136,3 +131,5 @@ body {
 .social-links {
 	margin: 0 10px 0 0;
 }
+
+/*Testimonial*/
